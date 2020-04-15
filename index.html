@@ -41,7 +41,7 @@
 	  		opacity: 0;
 	  	}
 	  	.sunset{
-	  		background: linear-gradient(0deg, rgba(195,75,42,1) 0%, rgba(129,29,121,1) 8%, rgba(89,1,170,1) 29%, rgba(1,5,79,1) 90%);
+	  		background: linear-gradient(0deg, rgba(195,75,42,1) 0%, rgba(129,29,121,1) 8%, rgba(89,1,170,1) 16%, rgba(1,5,79,1) 90%);
 	  		opacity: 0;
 	  	}
 	  	.evening{
@@ -50,18 +50,6 @@
 	  	}
 	  	.midnight{
 	  		background: linear-gradient(0deg, rgba(0,3,60,1) 0%, rgba(0,0,0,1) 100%);
-	  		opacity: 0;
-	  	}
-	  	.red{
-	  		background: linear-gradient(90deg, rgba(255,0,255,1) 0%, rgba(255,0,0,1) 50%, rgba(255,255,0,1) 100%);
-	  		opacity: 0;
-	  	}
-	  	.green{
-	  		background: linear-gradient(90deg, rgba(255,255,0,1) 0%, rgba(0,255,0,1) 50%, rgba(0,255,255,1) 100%);
-	  		opacity: 0;
-	  	}
-	  	.blue{
-	  		background: linear-gradient(90deg, rgba(0,255,255,1) 0%, rgba(0,0,255,1) 50%, rgba(255,0,255,1) 100%);
 	  		opacity: 0;
 	  	}
 	  	.jam,.ucapan,.quotes{
@@ -111,7 +99,7 @@
 	  		position: absolute;
 	  		top: calc(50% - 5px);
 	  		right: -30px;
-	  		border: 2px solid rgba(255,255,255,0.2);
+	  		border: 4px solid rgba(255,255,255,0.2);
 	  		border-bottom: none;
 	  		border-left: none;
 	  		border-radius: 2px;
@@ -319,9 +307,6 @@
 		<div class="bg sunset"></div>
 		<div class="bg evening"></div>
 		<div class="bg midnight"></div>
-		<div class="bg red"></div>
-		<div class="bg green"></div>
-		<div class="bg blue"></div>
 		<div class="container">
 			<div class="quotes">
 				<p id="quotation"></p>
@@ -515,68 +500,6 @@
 				$(".blue").animate({opacity:"0"},2000);
 				white();
 			}
-			function red(){
-				white();
-				$(".jam").css("color","#F00");
-				$(".ucapan").css("color","#F00");
-				$(".bulat span").css("border-color","#F00");
-				$(".kotak li").css("background","#000");
-				$(".red").animate({opacity:"1"},2000);
-				$(".midnight").animate({opacity:"0"},2000);
-				$(".dawn").animate({opacity:"0"},2000);
-				$(".ubuntu").animate({opacity:"0"},2000);
-				$(".morning").animate({opacity:"0"},2000);
-				$(".noon").animate({opacity:"0"},2000);
-				$(".afternoon").animate({opacity:"0"},2000);
-				$(".sunset").animate({opacity:"0"},2000);
-				$(".evening").animate({opacity:"0"},2000);
-				$(".green").animate({opacity:"0"},2000);
-				$(".blue").animate({opacity:"0"},2000);
-			}
-			function green(){
-				white();
-				$(".jam").css("color","#0F0");
-				$(".ucapan").css("color","#0F0");
-				$(".bulat span").css("border-color","#0F0");
-				$(".kotak li").css("background","#000");
-				$(".green").animate({opacity:"1"},2000);
-				$(".midnight").animate({opacity:"0"},2000);
-				$(".dawn").animate({opacity:"0"},2000);
-				$(".ubuntu").animate({opacity:"0"},2000);
-				$(".morning").animate({opacity:"0"},2000);
-				$(".noon").animate({opacity:"0"},2000);
-				$(".afternoon").animate({opacity:"0"},2000);
-				$(".sunset").animate({opacity:"0"},2000);
-				$(".evening").animate({opacity:"0"},2000);
-				$(".red").animate({opacity:"0"},2000);
-				$(".blue").animate({opacity:"0"},2000);
-			}
-			function blue(){
-				white();
-				$(".jam").css("color","#00F");
-				$(".ucapan").css("color","#00F");
-				$(".bulat span").css("border-color","#00F");
-				$(".kotak li").css("background","#000");
-				$(".blue").animate({opacity:"1"},2000);
-				$(".midnight").animate({opacity:"0"},2000);
-				$(".dawn").animate({opacity:"0"},2000);
-				$(".ubuntu").animate({opacity:"0"},2000);
-				$(".morning").animate({opacity:"0"},2000);
-				$(".noon").animate({opacity:"0"},2000);
-				$(".afternoon").animate({opacity:"0"},2000);
-				$(".sunset").animate({opacity:"0"},2000);
-				$(".evening").animate({opacity:"0"},2000);
-				$(".red").animate({opacity:"0"},2000);
-				$(".green").animate({opacity:"0"},2000);
-			}
-			function white(){
-				$(".jam").css("color","#FFF");
-				$(".ucapan").css("color","#FFF");
-				$(".quotes").css("color","#FFF");
-				$(".quotes").css("text-shadow","0px 0px 10px #000");
-				$(".bulat span").css("border-color","#FFF");
-				$(".kotak li").css("background","#FFF");
-			}
 			function debug(){
 				console.log(auto);
 			}
@@ -611,7 +534,7 @@
 					txt2=txt;
 				}
 				else if(H<9){
-					txt='Pagi, Resa';
+					txt='Morning, Resa';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
@@ -723,19 +646,19 @@
 			    "source": "Reza"
 			  },
 			  {
-			    "quote": "aku hanya bisa menyayangimu dari kejauhan dan mencoba menjauh karena aku tahu aku kalah bersaing mendapatkanmu",
-			    "source": "Akbar Rivawan"
-			  },
-			  {
-			    "quote": "Semoga kamu meyukai ini",
-			    "source": "Reza"
-			  },
-			  {
-			    "quote": "Hai apa kabar",
+			    "quote": "Kamu rajin pakai skincare, tapi dia tak pernah care",
 			    "source": "~"
 			  },
 			  {
-			    "quote": "Senyummu begitu indah",
+			    "quote": "Aku ingin lebih mengenalmu :)",
+			    "source": "Reza"
+			  },
+			  {
+			    "quote": "Banyaki makan Mandai !!!",
+			    "source": "Reza"
+			  },
+			  {
+			    "quote": "Senyum mu begitu indah",
 			    "source": "~"
 			  },
 			  {
