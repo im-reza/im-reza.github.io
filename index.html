@@ -41,7 +41,7 @@
 	  		opacity: 0;
 	  	}
 	  	.sunset{
-	  		background: linear-gradient(0deg, rgba(195,75,42,1) 0%, rgba(129,29,121,1) 8%, rgba(89,1,170,1) 16%, rgba(1,5,79,1) 90%);
+	  		background: linear-gradient(0deg, rgba(195,75,42,1) 0%, rgba(129,29,121,1) 8%, rgba(89,1,170,1) 29%, rgba(1,5,79,1) 90%);
 	  		opacity: 0;
 	  	}
 	  	.evening{
@@ -335,7 +335,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
-			gaming=false;
 			tombol=false;
 			$(".panah").click(function(){
 				if (tombol==false){
@@ -351,15 +350,13 @@
 			auto=true;
 			cek=false;
 			$(".kontrol").click(function(){
-				gaming=false;
 				if($("#customRadio0").prop('checked')){
 					if(!cek){
 						init_auto();
 					}
 					auto=true;
 					cek=true;
-				}
-				else{
+				}else{
 					auto=false;
 					cek=false;
 				}
@@ -388,6 +385,22 @@
 					midnight();
 				}
 			});
+			function black(){
+				$(".jam").css("color","#FFF");
+				$(".ucapan").css("color","#FFF");
+				$(".quotes").css("color","#FFF");
+				$(".quotes").css("text-shadow","0px 0px 10px #000");
+				$(".bulat span").css("border-color","#FFF");
+				$(".kotak li").css("background","#FFF");
+			}
+			function white(){
+				$(".jam").css("color","#FFF");
+				$(".ucapan").css("color","#FFF");
+				$(".quotes").css("color","#FFF");
+				$(".quotes").css("text-shadow","0px 0px 10px #000");
+				$(".bulat span").css("border-color","#FFF");
+				$(".kotak li").css("background","#FFF");
+			}
 			function ubuntu(){
 				$(".ubuntu").animate({opacity:"1"},1000);
 				$(".dawn").animate({opacity:"0"},500);
@@ -534,7 +547,7 @@
 					txt2=txt;
 				}
 				else if(H<9){
-					txt='Morning, Resa';
+					txt='Pagi, Jangan Lupa Sarapan Ya';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
@@ -546,13 +559,13 @@
 					txt2=txt;
 				}
 				else if(H<16){
-					txt='Good Afternoon Resa :)';
+					txt='Good Afternoon :)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
 				else if(H<19){
-					txt='Sore kaka :)';
+					txt='Jangan lupa sholat Maghrib :)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
@@ -634,40 +647,40 @@
 
 			const quotes = [
 			  {
-			    "quote": "Jangan berhenti baik , hanya karena kamu pernah disakiti",
+			    "quote": "Jangan berhenti baik, hanya karena kamu pernah disakiti",
 			    "source": "Resa"
 			  },
 			  {
-			    "quote": "Proposal digawi !",
-			    "source": "~"
+			    "quote": "Teruntuk kamu yang patah hati, Jangan putus asa untuk mencari dan membuka hati lagi. Karena proses hidup tak semulus wajah pakai skincare",
+			    "source": "Resa"
 			  },
 			  {
-			    "quote": "Kayak nya nda salah jurusan",
-			    "source": "Reza"
+			    "quote": "Bisa ku cuma cemburu, sebab bisa ku hanyalah mencintaimu diam-diam",
+			    "source": "Mas Pur"
 			  },
 			  {
-			    "quote": "Kamu rajin pakai skincare, tapi dia tak pernah care",
-			    "source": "~"
+			    "quote": "Pengetahuan akan memberimu kekuatan, tetapi karakter memberimu kehormatan",
+			    "source": "Bruce Lee"
 			  },
 			  {
-			    "quote": "Aku ingin lebih mengenalmu :)",
-			    "source": "Reza"
+			    "quote": "Pejuang sejati itu tahu kapan waktunya maju, kapan waktunya mundur. Tapi untuk perjuangkan kamu, aku tak akan mundur",
+			    "source": "Mas Pur"
 			  },
 			  {
-			    "quote": "Banyaki makan Mandai !!!",
-			    "source": "Reza"
+			    "quote": "Aku sudah pernah merasakan semua kepahitan dalam hidup dan yang paling pahit ialah berharap kepada manusia",
+			    "source": "Ali bin Abi Thalib"
 			  },
 			  {
-			    "quote": "Senyum mu begitu indah",
-			    "source": "~"
+			    "quote": "Dengan senyuman, membuat masalah terasa ringan",
+			    "source": "Encounter"
 			  },
 			  {
 			    "quote": "Ada kalimat yang ingin aku dapatkan dari dia tapi aku dapat dari orang lain",
 			    "source": "Andika Sujanadi"
 			  },
 			  {
-			    "quote": "Kau begitu sempurna, Dimataku kau begitu indah",
-			    "source": "Andra, the Backbone"
+			    "quote": "Beri nilai dari usahanya jangan dari hasilnya",
+			    "source": "Albert Einstein"
 			  },
 			  {
 			    "quote": "Need someone to talk about life, but sitting alone is much better",
