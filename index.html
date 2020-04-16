@@ -564,20 +564,20 @@
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
-				else if((H>18) || (H<19)){
-					txt='Jangan lupa sholat Maghrib :)';
+				else if(H<19){
+					txt='Jangan lupa sholat :)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
-				else if(H<23){
-					txt='Good Night, Resa:)';
+				else if((H>19) || (H<22)){
+					txt='Good Night, Resa :)';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
 				}
 				else if(H<=24){
-					txt='Jangan Begadang :)';
+					txt='Waktunya Tidur, Jangan Begadang !';
 					if(txt != txt2 && !starting)
 						document.getElementById("quote").innerHTML = txt;
 					txt2=txt;
